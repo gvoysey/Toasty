@@ -13,6 +13,11 @@
 		BFAED4FE1A1BBCC700980A88 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BFAED4FD1A1BBCC700980A88 /* Images.xcassets */; };
 		BFAED5011A1BBCC700980A88 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = BFAED4FF1A1BBCC700980A88 /* LaunchScreen.xib */; };
 		BFAED50D1A1BBCC700980A88 /* ToastyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFAED50C1A1BBCC700980A88 /* ToastyTests.swift */; };
+		BFAED51D1A1BBCD600980A88 /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BFAED51C1A1BBCD600980A88 /* NotificationCenter.framework */; };
+		BFAED5221A1BBCD600980A88 /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFAED5211A1BBCD600980A88 /* TodayViewController.swift */; };
+		BFAED5241A1BBCD600980A88 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BFAED5231A1BBCD600980A88 /* MainInterface.storyboard */; };
+		BFAED5271A1BBCD600980A88 /* WidgetView.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = BFAED51A1A1BBCD600980A88 /* WidgetView.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		BFAED52D1A1BF02600980A88 /* AEXML.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFAED52C1A1BF02600980A88 /* AEXML.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -23,7 +28,28 @@
 			remoteGlobalIDString = BFAED4F01A1BBCC700980A88;
 			remoteInfo = Toasty;
 		};
+		BFAED5251A1BBCD600980A88 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFAED4E91A1BBCC700980A88 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BFAED5191A1BBCD600980A88;
+			remoteInfo = WidgetView;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		BFAED52B1A1BBCD600980A88 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				BFAED5271A1BBCD600980A88 /* WidgetView.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		BFAED4F11A1BBCC700980A88 /* Toasty.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Toasty.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -36,6 +62,12 @@
 		BFAED5061A1BBCC700980A88 /* ToastyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ToastyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFAED50B1A1BBCC700980A88 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BFAED50C1A1BBCC700980A88 /* ToastyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToastyTests.swift; sourceTree = "<group>"; };
+		BFAED51A1A1BBCD600980A88 /* WidgetView.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = WidgetView.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		BFAED51C1A1BBCD600980A88 /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
+		BFAED5201A1BBCD600980A88 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BFAED5211A1BBCD600980A88 /* TodayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
+		BFAED5231A1BBCD600980A88 /* MainInterface.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MainInterface.storyboard; sourceTree = "<group>"; };
+		BFAED52C1A1BF02600980A88 /* AEXML.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AEXML.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +85,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		BFAED5171A1BBCD600980A88 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BFAED51D1A1BBCD600980A88 /* NotificationCenter.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -61,6 +101,8 @@
 			children = (
 				BFAED4F31A1BBCC700980A88 /* Toasty */,
 				BFAED5091A1BBCC700980A88 /* ToastyTests */,
+				BFAED51E1A1BBCD600980A88 /* WidgetView */,
+				BFAED51B1A1BBCD600980A88 /* Frameworks */,
 				BFAED4F21A1BBCC700980A88 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -70,6 +112,7 @@
 			children = (
 				BFAED4F11A1BBCC700980A88 /* Toasty.app */,
 				BFAED5061A1BBCC700980A88 /* ToastyTests.xctest */,
+				BFAED51A1A1BBCD600980A88 /* WidgetView.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -112,6 +155,33 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		BFAED51B1A1BBCD600980A88 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BFAED51C1A1BBCD600980A88 /* NotificationCenter.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BFAED51E1A1BBCD600980A88 /* WidgetView */ = {
+			isa = PBXGroup;
+			children = (
+				BFAED52C1A1BF02600980A88 /* AEXML.swift */,
+				BFAED5211A1BBCD600980A88 /* TodayViewController.swift */,
+				BFAED5231A1BBCD600980A88 /* MainInterface.storyboard */,
+				BFAED51F1A1BBCD600980A88 /* Supporting Files */,
+			);
+			path = WidgetView;
+			sourceTree = "<group>";
+		};
+		BFAED51F1A1BBCD600980A88 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				BFAED5201A1BBCD600980A88 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -122,10 +192,12 @@
 				BFAED4ED1A1BBCC700980A88 /* Sources */,
 				BFAED4EE1A1BBCC700980A88 /* Frameworks */,
 				BFAED4EF1A1BBCC700980A88 /* Resources */,
+				BFAED52B1A1BBCD600980A88 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				BFAED5261A1BBCD600980A88 /* PBXTargetDependency */,
 			);
 			name = Toasty;
 			productName = Toasty;
@@ -150,6 +222,23 @@
 			productReference = BFAED5061A1BBCC700980A88 /* ToastyTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		BFAED5191A1BBCD600980A88 /* WidgetView */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BFAED5281A1BBCD600980A88 /* Build configuration list for PBXNativeTarget "WidgetView" */;
+			buildPhases = (
+				BFAED5161A1BBCD600980A88 /* Sources */,
+				BFAED5171A1BBCD600980A88 /* Frameworks */,
+				BFAED5181A1BBCD600980A88 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = WidgetView;
+			productName = WidgetView;
+			productReference = BFAED51A1A1BBCD600980A88 /* WidgetView.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -165,6 +254,9 @@
 					BFAED5051A1BBCC700980A88 = {
 						CreatedOnToolsVersion = 6.1;
 						TestTargetID = BFAED4F01A1BBCC700980A88;
+					};
+					BFAED5191A1BBCD600980A88 = {
+						CreatedOnToolsVersion = 6.1;
 					};
 				};
 			};
@@ -183,6 +275,7 @@
 			targets = (
 				BFAED4F01A1BBCC700980A88 /* Toasty */,
 				BFAED5051A1BBCC700980A88 /* ToastyTests */,
+				BFAED5191A1BBCD600980A88 /* WidgetView */,
 			);
 		};
 /* End PBXProject section */
@@ -202,6 +295,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BFAED5181A1BBCD600980A88 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BFAED5241A1BBCD600980A88 /* MainInterface.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -225,6 +326,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		BFAED5161A1BBCD600980A88 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BFAED5221A1BBCD600980A88 /* TodayViewController.swift in Sources */,
+				BFAED52D1A1BF02600980A88 /* AEXML.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -232,6 +342,11 @@
 			isa = PBXTargetDependency;
 			target = BFAED4F01A1BBCC700980A88 /* Toasty */;
 			targetProxy = BFAED5071A1BBCC700980A88 /* PBXContainerItemProxy */;
+		};
+		BFAED5261A1BBCD600980A88 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BFAED5191A1BBCD600980A88 /* WidgetView */;
+			targetProxy = BFAED5251A1BBCD600980A88 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -338,6 +453,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = Toasty/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -348,6 +464,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = Toasty/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -388,6 +505,30 @@
 			};
 			name = Release;
 		};
+		BFAED5291A1BBCD600980A88 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = WidgetView/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		BFAED52A1A1BBCD600980A88 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = WidgetView/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -413,6 +554,14 @@
 			buildConfigurations = (
 				BFAED5141A1BBCC700980A88 /* Debug */,
 				BFAED5151A1BBCC700980A88 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		BFAED5281A1BBCD600980A88 /* Build configuration list for PBXNativeTarget "WidgetView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BFAED5291A1BBCD600980A88 /* Debug */,
+				BFAED52A1A1BBCD600980A88 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};
