@@ -14,9 +14,11 @@ class TodayViewController: UIViewController, NCWidgetProviding, NSXMLParserDeleg
     
     
     @IBOutlet var frenchToastLabel : UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view from its nib.
+        self.preferredContentSize = CGSizeMake(320, 50);
         self.updateFrenchToastLevel()
     }
     
@@ -36,28 +38,30 @@ class TodayViewController: UIViewController, NCWidgetProviding, NSXMLParserDeleg
     }
     
     func updateFrenchToastLevel() {
+        self.frenchToastLabel.textColor = UIColor.lightGrayColor()
+        self.frenchToastLabel.text = "Loading ..."
         var url:NSURL = NSURL(string:"http://www.universalhub.com/toast.xml")!
         var error: NSError?
         var data:NSData = NSData(contentsOfURL: url)!
         
         if let xmlDoc = AEXMLDocument(xmlData: data, error: &error){
-            var level = xmlDoc.rootElement["frenchtoast"]["status"].value
+            var level = xmlDoc.rootElement["status"].value
             switch level{
                 case "Low":
                     self.frenchToastLabel.backgroundColor = UIColor(red: 151, green:255, blue:155, alpha:0.9)
-                case "Guarded"
+                case "Guarded":
                     self.frenchToastLabel.backgroundColor = UIColor(red: 151, green:153, blue: 255, alpha:0.9)
-                case "Elevated"
+                case "Elevated":
                     self.frenchToastLabel.backgroundColor = UIColor(red: 255, green:255, blue: 64, alpha:0.9)
-                case "High"
+                case "High":
                     self.frenchToastLabel.backgroundColor = UIColor(red: 255, green:130, blue: 29, alpha:0.9)
-                case "Severe"
+                case "Severe":
                     self.frenchToastLabel.backgroundColor = UIColor(red: 248, green:93, blue: 88, alpha:0.9)
+                default:
+                    break
             }
+            self.frenchToastLabel.textColor = UIColor.blackColor()
             self.frenchToastLabel.text = level
-        }
-        else{
-            self.frenchToastLabel.text = "Loading ..."
         }
     }
 }
@@ -71,4 +75,5 @@ extension UIColor {
                 blue: CGFloat(rgb & 0x0000FF) / 255.0,
                 alpha: CGFloat(1.0)
             )
- }
+        }
+}
